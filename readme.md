@@ -1,12 +1,12 @@
 🎁🎁🎁🎁🎁🎁🎁🎁🎁🎁🎁🎁🎁🎁🎁🎁🎁🎁🎁🎁🎁🎁🎁🎁🎁🎁🎁🎁🎁🎁🎁🎁🎁🎁🎁
 //AL ENTRAR A INBOX ,AUTOMATICAMENTE...
-//devolver todos los titulos y sus id de mensajes entrantes
+//devolver todos los titulos y sus id de mensajes entrantes ,de el id de el usuario registrado
 //AL NAVEGAR A /ENVIADOS ,AUTOMATICAMENTE...
-//devolver todos los titulos y sus id de mensajes enviados
+//devolver todos los titulos y sus id de mensajes enviados ,de el id de el usuario registrado
 //AL NAVEGAR A /BORRADOS ,AUTOMATICAMENTE...
-//devolver todos los titulos y sus id de mensajes eliminados
+//devolver todos los titulos y sus id de mensajes eliminados ,de el id de el usuario registrado
 //AL NAVEGAR A /FAVORITOS ,AUTOMATICAMENTE...
-//devolver todos los titulos y sus id de mensajes favoritos
+//devolver todos los titulos y sus id de mensajes favoritos ,de el id de el usuario registrado
 
 
 //AL SELECCIONAR UN MENSAJE DE INBOX
@@ -16,7 +16,7 @@
 //mandar un mensaje a un email especifico segun su id pasado con el body, y agregarlo a la lista de enviados del usuario, y de recibidos en el usuario destino
 
 //RESPONDER A UN MENSAJE (AL PRESIONAR EN RESPONDER)...
-//agregar un mensaje de respuesta a un mensaje especifico segun su id pasado con el body, 
+//agregar un mensaje de respuesta a un mensaje especifico segun su id pasado con el body, y hacer lo que se hace cuando se manda un mensaje (meterlo en el arreglo de usuario de el remitente y de el destinatario)
 
 
 //CAMBIOS DE ESTADOS DE MENSAJES EN USERS (QUE NO OCURREN AUTOMATICAMENTE)...
@@ -41,7 +41,7 @@
 -CORRECTO=mandar a agregar contrasena
 //AL AGREGAR CONTRASENA (PUEDE SERVIR PARA RECUPERAR CONTRASENA O CAMBIAR CONTRASENA)...
 -ERROR=
--CORRECTO=agregar usuario
+-CORRECTO=agregar usuario/o update usuario
 //AL PRESIONAR EN OLVIDE CONTRASENA...
 -
 //AL PRESIONAR EN CAMBIAR CONTRASENA...
@@ -55,18 +55,35 @@
 //agregar usuario
 //borrar usuario
 //actualizar usuario
-
+//recivir un usuarios (y extraccion de datos especificos)
+//recivir a todo los usuarios (y extraccion de datos especificos)
 
 
 
 
 //COMPOCISION DE MODELOS...
+//la idea de estos tres modelos (email, message y user) es un usuario (con sus datos privados y datos propios) conectdo con 'ref' a email (que solo tiene un titulo y una fecha), que une los mensajes de un chat unico (que se crea de el uno nuevo solo al abrir un nuevo chat), conectado con 'ref' a message que es el mensaje mismo.
+
+
+//user.model.js
+//email -email -string, unique y required
+//nombre de usuario -fullName -string, required
+//codigo de el usuario -password -string, select false
+//link a un avatar -avatar -string
+//arreglo de objetos email que contiene lo referente a cada usuario de forma diferente-emails -array de un objeto...
+//email -email -object id y su ref a email🚩
+//mandado -isSent -boolean
+//recivido -isRecieved -boolean
+//favorite -isFavorite -boolean
+//borrado -isDeleted -boolean
+//leido -isRead -boolean, default false
+//isActive -isActive -boolean, default true
+
 
 //email.model.js
 //titulo -subject -string
-//mensaje -msg -array de objeto con objectId y su ref
+//mensaje -msg -array de objeto con objectId y su ref a message🚩
 //fecha de actualizacion -lastDate -date
-
 
 
 //message.model.js
@@ -77,20 +94,6 @@
 //titulo de contenido -subject -string
 
 
-
-//user.model.js
-//email -email -string, unique y required
-//nombre de usuario -fullName -string, required
-//codigo de el usuario -password -string, select false
-//link a un avatar -avatar -string
-//arreglo de objetos email que contiene lo referente a cada usuario de forma diferente-emails -array de un objeto...
-//email -email -object id
-//mandado -isSent -boolean
-//recivido -isRecieved -boolean
-//favorite -isFavorite -boolean
-//borrado -isDeleted -boolean
-//leido -isRead -boolean, default false
-//isActive -isActive -boolean, default true
 
 
 

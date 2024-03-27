@@ -8,6 +8,7 @@ const { auth } = require('../middelewares/auth')
 //localhost:8000/email//inbox/6602a6f49937991b9cef6bba
 router.get('/inbox/:userId', async (req, res) => {
     try {
+//revisar -cambiar de req.params a req.body
 let result = await emailService.getAllRecieved(req.params.userId)
         res.send(result)
     }
@@ -21,6 +22,7 @@ let result = await emailService.getAllRecieved(req.params.userId)
 //localhost:8000/email//inbox/6602a6f49937991b9cef6bba
 router.post('/:emailId', async (req, res) => {
     try {
+        //revisar -cambiar de req.params a req.body
         let result = await emailService.addNewMessageToEmail(req.params.emailId, req.body)
         res.send(result)
     }
