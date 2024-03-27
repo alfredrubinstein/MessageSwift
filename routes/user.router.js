@@ -1,14 +1,11 @@
-
+//revisar -me parece repeticion entre message.router y user.router
 const express = require('express'),
-    router = express.Router();
-
+router = express.Router();
 const { auth } = require('../middlewares/auth')
 
 
-
-
-
-
+//para mandar un mensaje a un usuario especifico
+//localhost:8000/
 router.post('/inbox/:userId', auth, async (req, res) => {
     try {
 
@@ -27,7 +24,5 @@ router.post('/inbox/:userId', auth, async (req, res) => {
     }
 
 })
-
-
 
 module.exports = router;
