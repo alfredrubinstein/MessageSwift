@@ -57,3 +57,94 @@
 //agregar usuario
 //borrar usuario
 //actualizar usuario
+
+
+
+
+
+//COMPOCISION DE MODELOS...
+
+//email.model.js
+//titulo -subject -string
+//mensaje -msg -array de objeto con objectId y su ref
+//fecha de actualizacion -lastDate -date
+
+
+
+//message.model.js
+//destinatario -to -array de un objeto
+//remitente -from -string
+//fecha de creacion -date -date
+//contenido -content -string
+//titulo de contenido -subject -string
+
+
+
+//user.model.js
+//email -email -string, unique y required
+//nombre de usuario -fullName -string, required
+//codigo de el usuario -password -string, select false
+//link a un avatar -avatar -string
+//arreglo de objetos email que contiene lo referente a cada usuario de forma diferente-emails -array de un objeto...
+//email -email -object id
+//mandado -isSent -boolean
+//recivido -isRecieved -boolean
+//favorite -isFavorite -boolean
+//borrado -isDeleted -boolean
+//leido -isRead -boolean, default false
+//isActive -isActive -boolean, default true
+
+
+
+
+
+
+
+
+//IDEAS DE ARTI...
+Funciones en Controller y Services para un proyecto de mensajería
+En un proyecto de mensajería usando NodeJS, Mongoose y Express, puedes dividir la lógica de tu aplicación en dos capas principales: Controller y Services.
+
+Controller:
+Maneja las solicitudes HTTP:
+Recibe solicitudes de los clientes.
+Valida la entrada.
+Procesa la solicitud y genera una respuesta.
+Envía la respuesta al cliente.
+Interactua con la capa de Services:
+Llama a las funciones de Services para obtener o modificar datos.
+Maneja los errores que puedan ocurrir en la capa de Services.
+
+Services:
+Contiene la lógica de negocio:
+Implementa las funciones para CRUD (Crear, Leer, Actualizar, Eliminar) de los mensajes.
+Realiza la lógica de negocio específica de tu aplicación, como la gestión de usuarios, conversaciones, notificaciones, etc.
+Interactua con la base de datos:
+Realiza consultas a la base de datos usando Mongoose.
+Crea, actualiza y elimina documentos en la base de datos.
+Ejemplos de funciones:
+
+Controller:
+getMessages(req, res): Obtiene una lista de mensajes.
+createMessage(req, res): Crea un nuevo mensaje.
+getMessageById(req, res): Obtiene un mensaje por su ID.
+updateMessage(req, res): Actualiza un mensaje existente.
+deleteMessage(req, res): Elimina un mensaje.
+
+Services:
+getAllMessages(): Obtiene todos los mensajes de la base de datos.
+getMessageById(id): Obtiene un mensaje por su ID de la base de datos.
+createMessage(messageData): Crea un nuevo mensaje en la base de datos.
+updateMessage(id, messageData): Actualiza un mensaje existente en la base de datos.
+deleteMessage(id): Elimina un mensaje de la base de datos.
+
+Ventajas de separar Controller y Services:
+Mejora la organización del código:
+Facilita la comprensión y el mantenimiento del código.
+Permite la reutilización de la lógica de negocio en diferentes partes de la aplicación.
+Facilita las pruebas:
+Permite probar la lógica de negocio de forma independiente de la capa de presentación.
+Aumenta la escalabilidad:
+Permite escalar la capa de Services de forma independiente de la capa de Controller.
+
+

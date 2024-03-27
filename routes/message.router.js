@@ -1,9 +1,10 @@
-
+//revisar -me parece repeticion entre message.router y user.router
 const express = require('express'),
-    router = express.Router();
-
+router = express.Router();
 const { auth } = require('../middlewares/auth')
 
+//para mandar un mensaje
+//localhost:8000/
 router.post('/', auth, async (req, res) => {
     try {
 

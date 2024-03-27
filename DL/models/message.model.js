@@ -28,3 +28,11 @@ const messageSchema = new mongoose.Schema({
 const messageModel = mongoose.model('message', messageSchema)
 
 module.exports = messageModel
+
+
+//message.model.js
+//destinatario -to -array de un objeto
+//remitente -from -string
+//fecha de creacion -date -date
+//contenido -content -string
+//titulo de contenido -subject -string

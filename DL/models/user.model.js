@@ -44,3 +44,18 @@ const userSchema = new mongoose.Schema({
 const userModel = mongoose.model('user', userSchema)
 
 module.exports = userModel
+
+
+//user.model.js
+//email -email -string, unique y required
+//nombre de usuario -fullName -string, required
+//codigo de el usuario -password -string, select false
+//link a un avatar -avatar -string
+//arreglo de objetos email que contiene lo referente a cada usuario de forma diferente-emails -array de un objeto...
+//email -email -object id
+//mandado -isSent -boolean
+//recivido -isRecieved -boolean
+//favorite -isFavorite -boolean
+//borrado -isDeleted -boolean
+//leido -isRead -boolean, default false
+//isActive -isActive -boolean, default true

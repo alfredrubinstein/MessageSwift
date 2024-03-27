@@ -1,5 +1,5 @@
  //bussiness logic for user
- //aqui podemos hacer validaciones o calculos
+ //aqui pondre toda las funciones que se necesiten para el manejo de usuarios
  const userController = require('../DL/controllers/user.controller');
 
 
@@ -12,17 +12,10 @@ async function getUserById(userId) {
   return await userController.readOne({ _id:userId });
 }
 
-
-
-
-
 // async function getUserByEmail(email) {
 //   return await userController.readOne({
 //     email: email,
 //   });
-
-
-
 
 module.exports = {
     createUser,
