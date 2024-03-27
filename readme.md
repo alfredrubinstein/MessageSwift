@@ -55,3 +55,39 @@
 //agregar usuario
 //borrar usuario
 //actualizar usuario
+
+
+
+
+
+//COMPOCISION DE MODELOS...
+
+//email.model.js
+//titulo -subject -string
+//mensaje -msg -array de objeto con objectId y su ref
+//fecha de actualizacion -lastDate -date
+
+
+
+//message.model.js
+//destinatario -to -array de un objeto
+//remitente -from -string
+//fecha de creacion -date -date
+//contenido -content -string
+//titulo de contenido -subject -string
+
+
+
+//user.model.js
+//email -email -string, unique y required
+//nombre de usuario -fullName -string, required
+//codigo de el usuario -password -string, select false
+//link a un avatar -avatar -string
+//arreglo de objetos email que contiene lo referente a cada usuario de forma diferente-emails -array de un objeto...
+//email -email -object id
+//mandado -isSent -boolean
+//recivido -isRecieved -boolean
+//favorite -isFavorite -boolean
+//borrado -isDeleted -boolean
+//leido -isRead -boolean, default false
+//isActive -isActive -boolean, default true
