@@ -12,6 +12,8 @@
 //AL SELECCIONAR UN MENSAJE DE INBOX
 //mostrar el contenido de un mensaje especifico segun su id pasado con el body, cambiar el estado a leido, y mostrar el contenido de los mensajes de respuesta a ese mensaje (usando populate a la propiedad msg de email)
 
+
+
 //MANDAR MENSAJE (AL PRESIONAR EN MANDAR)...
 //mandar un mensaje a un email especifico segun su id pasado con el body, y agregarlo a la lista de enviados del usuario, y de recibidos en el usuario destino
 
