@@ -1,11 +1,11 @@
 //bussiness logic for email
-//poner aqui toda las funciones que se necesiten para el manejo de emails
 const emailController = require('../DL/controllers/email.controller')
 const messageController = require('../DL/controllers/message.controller')
 const userController = require('../DL/controllers/user.controller')
 
-//funcion para obtener todos los emails recibidos de un usuario en especifico
-//hace uso de la funcion readOne de emailController
+
+
+
 async function getAllRecieved(userId) {
         const filter={
                 _id:userId,
