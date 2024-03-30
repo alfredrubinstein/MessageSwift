@@ -1,3 +1,6 @@
+//proyecto express miercoles noche
+terminar con lo que ocurre automaticamente con el direccionamiento solo
+
 🎁🎁🎁🎁🎁🎁🎁🎁🎁🎁🎁🎁🎁🎁🎁🎁🎁🎁🎁🎁🎁🎁🎁🎁🎁🎁🎁🎁🎁🎁🎁🎁🎁🎁🎁
 //AL ENTRAR A INBOX ,AUTOMATICAMENTE...
 //devolver todos los titulos y sus id de mensajes entrantes ,de el id de el usuario registrado
@@ -21,11 +24,11 @@
 
 //CAMBIOS DE ESTADOS DE MENSAJES EN USERS (QUE NO OCURREN AUTOMATICAMENTE)...
 //cambiar el estado de un mensaje a favorito segun su id pasado con el body (al presionar en favorito)
-
+-
 //cambiar el estado de un mensaje a eliminado segun su id pasado con el body (al presionar en eliminar)
-
+-
 //(leido se cambia automaticamente al ver el mensaje)
-
+-
 
 
 
@@ -66,32 +69,32 @@
 
 
 //user.model.js
-//email -email -string, unique y required
-//nombre de usuario -fullName -string, required
-//codigo de el usuario -password -string, select false
-//link a un avatar -avatar -string
-//arreglo de objetos email que contiene lo referente a cada usuario de forma diferente-emails -array de un objeto...
-//email -email -object id y su ref a email🚩
-//mandado -isSent -boolean
-//recivido -isRecieved -boolean
-//favorite -isFavorite -boolean
-//borrado -isDeleted -boolean
-//leido -isRead -boolean, default false
-//isActive -isActive -boolean, default true
+//email -> email -string, unique y required
+//nombre de usuario -> fullName -string, required
+//codigo de el usuario -> password -string, select false
+//link a un avatar -> avatar -string
+//arreglo de objetos email que contiene lo referente a cada usuario de forma diferente-> emails -array de un objeto...
+//email -> email -object id y su ref a email🚩
+//mandado -> isSent -boolean
+//recivido -> isRecieved -boolean
+//favorite -> isFavorite -boolean
+//borrado -> isDeleted -boolean
+//leido -> isRead -boolean, default false
+//isActive -> isActive -boolean, default true
 
 
 //email.model.js
-//titulo -subject -string
-//mensaje -msg -array de objeto con objectId y su ref a message🚩
-//fecha de actualizacion -lastDate -date
+//titulo -> subject -string
+//mensaje -> msg -array de objeto con objectId y su ref a message🚩
+//fecha de actualizacion -> lastDate -date
 
 
 //message.model.js
-//destinatario -to -array de un objeto
-//remitente -from -string
-//fecha de creacion -date -date
-//contenido -content -string
-//titulo de contenido -subject -string
+//destinatario -> to -array de un objeto
+//remitente -> from -string
+//fecha de creacion -> date -date
+//contenido -> content -string
+//titulo de contenido -> subject -string
 
 
 
